@@ -25,22 +25,23 @@ function makeMove(index) {
 
     currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
 
-    // If in AI mode, make AI move
-    if (currentPlayer === 'O' && window.location.search.includes('mode=AI')) {
+    if (currentPlayer === 'O') {
         aiMove();
     }
 }
 
 function aiMove() {
-    let availableMoves = board.map((cell, index) => (cell === '') ? index : null).filter(index => index !== null);
+    let availableMoves = board.map((cell, index) => (cell === '') ? index : null).filter(val => val !== null);
     let randomMove = availableMoves[Math.floor(Math.random() * availableMoves.length)];
-    makeMove(randomMove);
+    if (randomMove !== undefined) {
+        makeMove(randomMove);
+    }
 }
 
 function checkWinner() {
     return winningConditions.some(condition => {
         const [a, b, c] = condition;
-        return board[a] === currentPlayer && board[b] === currentPlayer && board[c] === currentPlayer;
+        return board[a] && board[a] === board[b] && board[a] === board[c];
     });
 }
 
@@ -48,7 +49,9 @@ function resetGame() {
     board = ['', '', '', '', '', '', '', '', ''];
     currentPlayer = 'X';
     isGameActive = true;
-    Array.from(document.getElementById('board').children).forEach(cell => {
-        cell.innerText = '';
-    });
+    Array.from(document.getElementById('board').children).forEach(cell => cell.innerText = '');
+}
+
+function goBack() {
+    window.history.back();
 }

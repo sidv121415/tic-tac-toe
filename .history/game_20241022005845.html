@@ -10,18 +10,11 @@
             background-color: #FFFDD0;
             font-family: 'Roboto', sans-serif;
         }
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* Centering the content horizontally */
-            justify-content: center; /* Centering the content vertically */
-            height: 100vh; /* Full height of the viewport */
-        }
         #board {
             display: grid;
             grid-template-columns: repeat(3, 100px);
             gap: 5px;
-            margin: 20px 0; /* Margin for vertical spacing */
+            margin: 20px auto;
         }
         .cell {
             width: 100px;
@@ -36,21 +29,14 @@
             cursor: pointer;
             border-radius: 10px;
         }
-        .button-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
     </style>
 </head>
 <body>
     <div class="container text-center">
         <h1 class="mt-5">Tic Tac Toe</h1>
         <div id="board" class="mt-3"></div>
-        <div class="button-container">
-            <button class="btn btn-danger mt-3" onclick="resetGame()">Reset Game</button>
-            <button class="btn btn-info mt-3 ml-3" onclick="location.href='mode-selection.html'">Back to Mode Selection</button>
-        </div>
+        <button class="btn btn-danger mt-3" onclick="resetGame()">Reset Game</button>
+        <button class="btn btn-info mt-3" onclick="location.href='mode-selection.html'">Back to Mode Selection</button>
     </div>
 
     <script src="game.js"></script>
