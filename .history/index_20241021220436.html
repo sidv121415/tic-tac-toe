@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe - Home</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+        .head {
+            font-family: Courier New;
+            font-weight: bold;
+            color: white;
+        }
+        .w {
+            background-color: white;
+            color: white;
+            width: 100%;
+        }
+        .but {
+            width: 150px;
+            height: 60px;
+            border-radius: 10px;
+            border-width: 0;
+            background-color: #325391;
+            color: white;
+            font-size: 20px;
+            font-family: Roboto;
+            margin-bottom: 40px;
+        }
+        .back {
+            background-color: black;
+        }
+        .d {
+            background-color: black;
+        }
+        .main-div {
+            background-size: cover;
+            background-image: url("https://img.freepik.com/premium-photo/bright-neon-cross-glow-against-dark-black-background-making-striking-eyecatching-image_1154968-111484.jpg");
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-div">
+        <div class="d pt-4">
+            <h1 class="text-center head">Tic Tac Toe</h1>
+        </div>
+        <div class="d-flex justify-content-center mt-5">
+            <div class="d-flex flex-column back text-center">
+                <img src="https://www.shutterstock.com/shutterstock/videos/1104713975/thumb/10.jpg?ip=x480" class="img"/>
+                <hr class="w"/>
+                <div>
+                    <button class="but" onclick="location.href='mode-selection.html'">Play Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
